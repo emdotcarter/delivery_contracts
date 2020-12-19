@@ -4,9 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-wheel = "*"
-setuptools = "*"
-twine = "*"
+flask = "*"
 
 [dev-packages]
 pytest = "*"
