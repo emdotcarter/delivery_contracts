@@ -35,4 +35,22 @@ contracts = [
         "destination": "Silcily 8",
         "status": "open",
     },
+    {
+        "item": "Unknown",
+        "crew": {
+            "size": 3,
+            "conditions": [],
+        },
+        "destination": "Cannibalon",
+        "status": "open",
+    },
+    {
+        "item": "Guenter",
+        "crew": {
+            "size": 4,
+            "conditions": [],
+        },
+        "destination": "Mars",
+        "status": "open",
+    },
 ]

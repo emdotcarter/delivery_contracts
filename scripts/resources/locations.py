@@ -4,4 +4,6 @@ locations = [
     {"name": "chapek 9", "coordinates": [3, 10, 1]},
     {"name": "trisol", "coordinates": [5, 4, 5]},
     {"name": "sicily 8", "coordinates": [1, 8, 9]},
+    {"name": "cannibalon", "coordinates": [7, 3, 3]},
+    {"name": "mars", "coordinates": [2, 2, 3]},
 ]
