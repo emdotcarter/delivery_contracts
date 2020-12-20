@@ -12,7 +12,7 @@ contracts = [
         "item": "Lug Nuts",
         "crew": {
             "size": 3,
-            "conditions": ["non-human"],
+            "conditions": ["not human"],
         },
         "destination": "Chapek 9",
         "status": "open",

@@ -31,7 +31,6 @@ class Contract:
     @classmethod
     def find_by_id(cls, id):
         cursor = cls._db_cursor()
-        print(id)
         contract_row = cursor.execute(
             """
             SELECT c.id, c.item, c.crew_size, c.destination, cs.status

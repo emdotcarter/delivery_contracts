@@ -2,6 +2,7 @@ import datetime
 import sqlite3
 
 from resources.contracts import contracts
+from resources.locations import locations
 
 db_connection = sqlite3.connect("delivery_contract_system.db")
 cursor = db_connection.cursor()
@@ -90,6 +91,34 @@ for c in contracts:
             VALUES (?, ?, ?)
             """,
         (contract_id, "open", datetime.datetime.utcnow()),
+    )
+
+cursor.execute(
+    """
+    DROP TABLE IF EXISTS location;
+    """
+)
+
+cursor.execute(
+    """
+    CREATE TABLE location
+    (
+        id INTEGER PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        x INTEGER NOT NULL,
+        y INTEGER NOT NULL,
+        z INTEGER NOT NULL
+    );
+    """
+)
+
+for l in locations:
+    cursor.execute(
+        """
+        INSERT INTO location (name, x, y, z)
+        VALUES (?, ?, ?, ?);
+        """,
+        (l["name"], l["coordinates"][0], l["coordinates"][1], l["coordinates"][2]),
     )
 
 db_connection.commit()
