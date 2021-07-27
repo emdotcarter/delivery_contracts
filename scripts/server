@@ -1,1 +1,3 @@
+#!/bin/bash
+
 pipenv run flask run -p 8000
